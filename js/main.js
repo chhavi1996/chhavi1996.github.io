@@ -1,34 +1,60 @@
-function showIntro() {
-	document.getElementById('intro').className="final";
-	document.getElementById('intro').style.display="block";
-	document.getElementById('layer').style.display="block";
-}
-function hideIntro() {
-	document.getElementById('intro').className="init";
-	document.getElementById('intro').style.display="none";
-	document.getElementById('layer').style.display="none";
-}
-function showEducation()
-{
-	document.getElementById('edu').className="final";
-	document.getElementById('edu').style.display="block";
-	document.getElementById('layer').style.display="block";
-}
-function hideEducation()
-{
-	document.getElementById('edu').className="init";
-	document.getElementById('edu').style.display="none";
-	document.getElementById('layer').style.display="none";
-}
-function showProjects()
-{
-	document.getElementById('proj').className="final";
-	document.getElementById('proj').style.display="block";
-	document.getElementById('layer').style.display="block";
-}
-function hideProjects()
-{
-	document.getElementById('proj').className="init";
-	document.getElementById('proj').style.display="none";
-	document.getElementById('layer').style.display="none";
-}
+
+(function(){
+
+
+	let scrollDown = ()=>{
+		window.scrollBy({ 
+		  top: window.innerHeight, // could be negative value
+		  left: 0, 
+		  behavior: 'smooth' 
+		});
+	}
+
+	let i = 0;
+	const downImg = document.getElementsByClassName('down-img')[0];
+
+	downImg.addEventListener('click', ()=>{
+		scrollDown();
+	});
+	
+	setInterval(function(){
+		++i;
+		if( i%2 ){
+			downImg.className = "down-img final";
+		}
+		else{
+			downImg.className = "down-img";
+		}
+	}, 400);
+
+	const cse = document.getElementsByClassName('cse')[0],
+		web = document.getElementsByClassName('web')[0],
+		coding = document.getElementsByClassName('coding')[0];
+
+	setTimeout(function(){
+			cse.className = "cse final";
+			coding.className = "coding";
+		}, 1000);
+		setTimeout(function(){
+			web.className = "web final";
+			cse.className = "cse";
+		}, 1500);
+		setTimeout(function(){
+			coding.className = "coding final";
+			web.className = "web";
+		}, 3000);	
+	setInterval(function(){
+		setTimeout(function(){
+			cse.className = "cse final";
+			coding.className = "coding";
+		}, 1000);
+		setTimeout(function(){
+			web.className = "web final";
+			cse.className = "cse";
+		}, 2500);
+		setTimeout(function(){
+			coding.className = "coding final";
+			web.className = "web";
+		}, 4000);
+	},4500);
+})();
