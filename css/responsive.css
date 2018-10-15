@@ -1,45 +1,61 @@
-/*@media(max-width: 767px){
-	.header{
-		font-size: 25px;
+
+@media(max-width: 1000px){
+	.project-wrap{
+		width: 95%;
 	}
-}*/
-/*@media(min-width: 768px) and (max-width: 1200px){
-	.header{
-		font-size: 30px;
-	}
-}*/
+}
+
 @media(max-width: 900px){
+	.skill-wrap{
+		width: 100%;
+		padding: 20px 0;
+	}
+	.project, .layer{
+		width: 47.5%;
+	}
+}
 
-	.container .first{
-		position: static;
+@media(max-width: 767px){
+	body{
+		font-size: 80%;
+	}
+	.skills{
+		padding: 40px 0;
+	}
+	.languages, .webtech, .others{
+		float: none;
+		margin: 10px auto;
 		display: block;
-		width: 90%;
-		margin: 0px 5%;
-		height: 33.3333%;
-		left: 0;
-		/*top:;*/
+		width: 96%;
+		height: initial;
+		max-width: 420px;
 	}
-	.container .second{
-		position: static;
-		display: inline-block;
-		width: 90%;
-		margin: 0px 5%;
-		height: 33.3333%;
-		left: 0;
+	.project, .layer{
+		width: 100%;
+		height: 180px;
+		line-height: 180px;
+		margin: 5px 0;
 	}
-	.container .third{
-		position: static;
-		display: inline-block;
-		width: 90%;
-		margin: 0px 5%;
-		height: 33.3333%;
-		left: 0;
-		top: 0;
+	.layer{
+		margin: 0;
 	}
-	.second img{
-		position: relative;
-		width: 30%;
-		left: 35%;
+	.project-wrap{
+		width: 94%;
+		max-width: 420px;
+		padding: 20px 0;
+	}
+	.resume{
+		max-width: 160px;
+	}
+	.msg{
+		text-align: justify;
+		width: 95%;
+	}
 
+}
+
+@media(max-width: 320px){
+	body{
+		font-size: 75%;
 	}
 }
